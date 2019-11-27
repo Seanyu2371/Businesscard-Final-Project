@@ -1,0 +1,24 @@
+<a
+  style="cursor: pointer;"
+  [routerLink]="[index]"
+  routerLinkActive="active"
+  class="list-group-item clearfix">
+ <div class="pull-left">
+  <h4 class="list-group-item-heading"><i class="material-icons">{{ bscard.firstname }} {{bscard.lastname}}</i></h4>
+  <p class="list-group-item-text"><i class="material-icons">{{ bscard.email }}</i></p>
+  <p class="list-group-item-text"><i class="material-icons">{{ bscard.company }}</i></p>
+  <p class="list-group-item-text"><i class="material-icons">{{ bscard.title }}</i></p>
+  <p class="list-group-item-text"><i class="material-icons">{{ bscard.phone }}</i></p>
+</div>
+<span class="pull-right">
+  <!-- <app-camera></app-camera> -->
+  <!-- <img
+    [src]="recipe.imagePath"
+    alt="{{ recipe.name }}"
+    class="img-responsive"
+    style="max-height: 50px;"> -->
+    <li *ngFor="let c of photo">
+        <img src="{{ c }}" height="50" />
+    </li>
+</span>
+</a>

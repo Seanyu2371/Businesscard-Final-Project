@@ -1,0 +1,18 @@
+<div id="app-camera">
+    <div><video #video id="video" width="640" height="480" autoplay></video></div>
+    <div><button id="snap" (click)="capture()">Snap Photo</button></div>
+    <canvas #canvas id="canvas" width="640" height="480"></canvas>
+    <ul>
+        <li *ngFor="let c of captures">
+            <img src="{{ c }}" height="50" />
+        </li>
+    </ul>
+    
+    <h2>Result: </h2>
+    <p>
+      {{ print }}
+    </p>
+
+  </div>
+
+

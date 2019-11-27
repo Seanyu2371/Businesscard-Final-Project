@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-xs-12">
+    <button class="btn btn-success" (click)="onNewBscard()"><p class="txt">New Businesscard</p></button>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-xs-12">
+    <app-businesscard 
+      *ngFor="let el of businesscardss; let i = index"
+      [bscard]="el"
+      [index]="i"></app-businesscard>
+  </div>
+</div>
